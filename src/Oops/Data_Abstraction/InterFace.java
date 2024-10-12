@@ -1,4 +1,4 @@
-package Oops;
+package Oops.Data_Abstraction;
 
 interface Demo {
 	int a = 10; // In Interface Variables are by default Static & final
