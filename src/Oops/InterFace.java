@@ -8,21 +8,21 @@ interface Demo {
 		System.out.println((a + b) + ":" + "Add");
 	}
 
-	static void B() {
+	static void B(int a, int b) {
 		System.out.println((a / b) + ":" + "Division");
 	}
 
-	void c(); // Abstract Methods cannot Implement in Interface it Should be implement in
-				// class
+	void c(int a, int b); // Abstract Methods cannot Implement in Interface it Should be implement in
+	// class
 }
 
 public class InterFace implements Demo {
 
-	public void c() { /*
-						 * In InterFace by default access specifier will be default but its lower then
-						 * Public so access specifier should be public The Implementation of Abstract
-						 * method c take place here
-						 */
+	public void c(int a, int b) { /*
+									 * In InterFace by default access specifier will be default but its lower then
+									 * Public so access specifier should be public The Implementation of Abstract
+									 * method c take place here
+									 */
 		System.out.println((b - a) + ":" + "Subtraction");
 	}
 
@@ -35,23 +35,27 @@ public class InterFace implements Demo {
 										 * create create Object(Object of the class is storing into the class variable)
 										 */
 		Obj.A();
-		Obj.c();
+		Obj.c(200, 300);
 
-		Demo.B(); /*
-					 * access specifier is Static & its within the class so we can directly call
-					 * from Interface Name no need to creating Object
-					 */
+		Demo.B(500, 600); /*
+							 * access specifier is Static & its within the class so we can directly call
+							 * from Interface Name no need to creating Object
+							 */
 
 		// Scenario 1 : How to create Object for InterFace
 
 		Demo D = new InterFace(); /*
-									 * we can create a ref variable for InterFace but to create an Object we should
-									 * call class (Object of the Interface is storing into the class variable) 
+									 * we can create a refrains variable for InterFace but to create an Object we
+									 * should call class (Object of the Interface is storing into the class
+									 * variable)
 									 */
 		D.A();
-		D.c();
-		
-		Demo.B(); // Static Method can directly access from InterFace
+		D.c(200, 300); // here we can reinitialize the values because it comes under class
+
+		Demo.B(800, 900); /*
+							 * Static Method can directly access from InterFace (we cannon reinitialize the
+							 * value because by default its Static & Final)
+							 */
 
 	}
 
