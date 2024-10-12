@@ -1,4 +1,4 @@
-package Oops.Data_Abstraction;
+package Oops.Abstraction;
 
 //Similarly we can use in InterFace
 abstract class Vehicals {

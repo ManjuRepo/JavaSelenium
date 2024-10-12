@@ -1,4 +1,4 @@
-package Oops.Multiple_Inheritance;
+package Oops.Inheritance;
 
 public class combination_of_extents_impliments extends sample
 		implements Interface1, Interface2 { /* Extends allow only one class implements allow multiple Interface */

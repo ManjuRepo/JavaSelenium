@@ -1,4 +1,4 @@
-package Oops.Multiple_Inheritance;
+package Oops.Inheritance;
 
 public class Main_Class implements Interface1, Interface2 {
 

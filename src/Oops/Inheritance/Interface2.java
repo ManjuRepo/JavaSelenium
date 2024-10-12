@@ -1,4 +1,4 @@
-package Oops.Multiple_Inheritance;
+package Oops.Inheritance;
 
 interface Interface2 {
 	int b = 200; //static & Final
