@@ -1,4 +1,4 @@
-package Oops;
+package Other;
 
 // Used to covert from one type to another
 public class wrapper_class {

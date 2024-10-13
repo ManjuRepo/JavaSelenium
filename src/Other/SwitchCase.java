@@ -1,4 +1,4 @@
-package Oops;
+package Other;
 
 public class SwitchCase {
 	static String day = "Mondays";
