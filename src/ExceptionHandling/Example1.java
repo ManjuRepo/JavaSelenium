@@ -18,7 +18,7 @@ public class Example1 {
 			System.out.println(arr[Pos]);
 		} catch (Exception e) {
 			// TODO: handle exception
-			System.out.println(e.getMessage());
+			System.out.println(e.getMessage() + " Enter the Position between (0-4)");
 		}
 	}
 }

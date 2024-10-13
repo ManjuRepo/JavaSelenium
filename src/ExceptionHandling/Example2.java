@@ -8,7 +8,7 @@ public class Example2 {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the Value :");
+		System.out.println("Enter the Value (digits) :");
 		int day = sc.nextInt();
 		try {
 			switch (day) {

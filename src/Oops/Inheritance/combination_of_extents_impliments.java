@@ -1,7 +1,9 @@
 package Oops.Inheritance;
 
+import Oops.Encapsulation.sample;
+
 public class combination_of_extents_impliments extends sample
-		implements Interface1, Interface2 { /* Extends allow only one class implements allow multiple Interface */
+		implements Interface2, Interface1 { /* Extends allow only one class implements allow multiple Interface */
 
 	public void A() { // Implementation for Abstract class Interface1
 		System.out.println(a);
