@@ -38,13 +38,13 @@ public class sample {
 
 		// get all key & values
 		System.out.println(hm.entrySet());// {}>>represent list | [] represent set
-		
-		//reading data from hash map for loop not supported
-		
-		for(Object x:hm.entrySet().) {
+
+		// reading data from hash map for loop not supported
+
+		for (Object x : hm.entrySet()) {
 			System.out.println(x);
 		}
-		
+
 		Iterator<Entry<Integer, String>> p = hm.entrySet().iterator();
 		while (p.hasNext()) {
 			System.out.println(p.next());
