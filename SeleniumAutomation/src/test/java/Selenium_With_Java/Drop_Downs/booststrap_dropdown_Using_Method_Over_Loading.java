@@ -12,8 +12,8 @@ public class booststrap_dropdown_Using_Method_Over_Loading {
 
 	static WebDriver driver = new ChromeDriver();
 
-	public static void MultiDD(String... v1) throws InterruptedException {
-		driver.findElement(By.xpath("//*[contains(@class,'multiselect') and @type='button']")).click();
+	public static void MultiDD(WebElement Element, String... v1) throws InterruptedException {
+		Element.click();
 		List<WebElement> val = driver.findElements(By.xpath("//*[@class='multiselect-container dropdown-menu']"));
 
 		for (String option : v1) {
@@ -43,7 +43,8 @@ public class booststrap_dropdown_Using_Method_Over_Loading {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://www.jquery-az.com/boots/demo.php?ex=63.0_2");
-		booststrap_dropdown_Using_Method_Over_Loading.MultiDD("Angular", "CSS", "HTML");
+		WebElement ele = driver.findElement(By.xpath("//*[contains(@class,'multiselect') and @type='button']"));
+		booststrap_dropdown_Using_Method_Over_Loading.MultiDD(ele, "Angular", "CSS", "HTML");
 		driver.quit();
 	}
 
