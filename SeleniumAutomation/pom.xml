@@ -5,12 +5,27 @@
 	<groupId>SeleniumAutomation</groupId>
 	<artifactId>SeleniumAutomation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<dependencies> <!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+	<dependencies>
+		<!-- Selenium WebDriver dependency -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.25.0</version>
+			<version>4.9.1</version>
 		</dependency>
-	</dependencies>
+
+		<!-- WebDriverManager to automatically manage driver binaries -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+
+		<!-- SLF4J with Logback for logging setup -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.11</version>
+		</dependency>
+		</dependencies>
 </project>
