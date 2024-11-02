@@ -13,6 +13,7 @@ public class datecalender extends BrowserFactory {
 	static String Day = "18";
 	static String Month = "October";
 	static String year = "2027";
+	static String URL = "https://jqueryui.com/datepicker/";
 
 	static public void DatePicker(WebDriver driver, WebElement Element, String Day, String Month, String year)
 			throws InterruptedException {
@@ -35,17 +36,14 @@ public class datecalender extends BrowserFactory {
 				}
 			} else {
 				// Click "Next" to navigate to the desired month and year
-				Thread.sleep(1000);
 				driver.findElement(By.xpath("//*[text()='Next']")).click();
-				Thread.sleep(1000);
 			}
 		}
 	}
 
 	public static void main(String[] args) throws InterruptedException {
 		// Launch the specified browser and navigate to the URL
-		WebDriver driver = BrowserFactory.launchBrowser("chrome", "https://jqueryui.com/datepicker/");
-
+		WebDriver driver = BrowserFactory.launchBrowser("chrome", URL);
 		if (driver != null) {
 			// Perform actions with the driver...
 			driver.switchTo().frame(0);
@@ -53,6 +51,7 @@ public class datecalender extends BrowserFactory {
 			datecalender.DatePicker(driver, Ele, Day, Month, year);
 			// Close the browser after testing
 			Thread.sleep(5000);
+			System.out.println("Test Case Pass");
 			driver.quit();
 		}
 	}
