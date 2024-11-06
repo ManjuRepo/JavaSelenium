@@ -1,14 +1,10 @@
 package Selenium_With_Java.Waits;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ecpllysiply {
 
@@ -18,10 +14,11 @@ public class ecpllysiply {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		List<WebElement> GetName = wait
-				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy((By.xpath("//*[.='Username : Admin']"))));
+
+		// WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		// List<WebElement> GetName =
+		// wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy((By.xpath("//*[.='Username
+		// : Admin']"))));
 		String GetUserName = driver.findElement(By.xpath("//*[.='Username : Admin']")).getText();
 		String[] SplitUserName = GetUserName.split(":");
 		System.out.println("Length of an Test is : " + SplitUserName.length);
