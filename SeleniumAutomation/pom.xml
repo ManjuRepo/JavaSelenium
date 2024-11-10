@@ -14,13 +14,6 @@
 			<version>4.9.1</version>
 		</dependency>
 
-		<!-- WebDriverManager to automatically manage driver binaries -->
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>5.5.0</version>
-		</dependency>
-
 		<!-- SLF4J with Logback for logging setup -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
@@ -49,13 +42,6 @@
 			<version>2.20.0</version> <!-- or latest version -->
 		</dependency>
 
-		<!-- Log4j Core -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.20.0</version> <!-- or latest version -->
-		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -64,6 +50,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--
+		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.3.0</version>
+		</dependency>
 
 	</dependencies>
 </project>
