@@ -7,7 +7,6 @@ public class Launch_WebDriver {
 
 	public static void main(String[] args) throws InterruptedException {
 		// Open Browser
-		
 
 		WebDriver Chromedriver = new ChromeDriver();
 //		WebDriver Edgedriver = new EdgeDriver();
@@ -16,9 +15,9 @@ public class Launch_WebDriver {
 
 		// Navigate to specified URL
 		Thread.sleep(3000);
-	//	Chromedriver.get("https://www.youtube.com/");
+		// Chromedriver.get("https://www.youtube.com/");
 
 		// Close Browser
-	//	Chromedriver.close();
+		// Chromedriver.close();
 	}
 }
