@@ -3,7 +3,7 @@ package Selenium_With_Java.uploadDocument;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import Selenium_With_Java.genric.BrowserFactory;
+import superman.GenericUtility.PageObject.BrowserFactory;
 
 public class uploadfile extends BrowserFactory {
 

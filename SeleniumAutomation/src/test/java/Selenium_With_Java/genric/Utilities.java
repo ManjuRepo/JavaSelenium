@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BrowserFactory {
+public class Utilities {
 
     public static WebDriver launchBrowser(String browserType, String url) {
         WebDriver driver = null;

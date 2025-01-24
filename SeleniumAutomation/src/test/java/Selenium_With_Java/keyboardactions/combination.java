@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import Selenium_With_Java.genric.BrowserFactory;
+import superman.GenericUtility.PageObject.BrowserFactory;
 
 public class combination extends BrowserFactory {
 	static String URL = "https://text-compare.com/";

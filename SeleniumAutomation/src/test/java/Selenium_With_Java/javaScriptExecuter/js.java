@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Selenium_With_Java.genric.BrowserFactory;
+import superman.GenericUtility.PageObject.BrowserFactory;
 
 public class js extends BrowserFactory {
 

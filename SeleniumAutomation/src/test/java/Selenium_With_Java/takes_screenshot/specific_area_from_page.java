@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Selenium_With_Java.genric.BrowserFactory;
+import superman.GenericUtility.PageObject.BrowserFactory;
 
 public class specific_area_from_page extends BrowserFactory {
 	static String URL = "https://testautomationpractice.blogspot.com/";

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import Selenium_With_Java.genric.BrowserFactory;
+import superman.GenericUtility.PageObject.BrowserFactory;
 
 public class slider extends BrowserFactory {
 	static String URL = "https://testautomationpractice.blogspot.com/#";
