@@ -13,6 +13,8 @@ public class SetEnvironment extends BaseClass {
 
 	public static void Execute() {
 
+		System.out.println("Launching : " + "" + BaseClass.browser + " " + "browser");
+		System.out.println(" ");
 		driver.get(url);
 		System.out.println("SuperMan Application Launched : " + "" + url);
 		System.out.println(" ");

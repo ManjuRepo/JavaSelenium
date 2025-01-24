@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -44,39 +46,52 @@ public class BaseClass {
 	}
 
 	/*****************************************************************************************************************************************************************************************************/
-	 public static WebDriver launchBrowser(String browser) {
-	        // Initialize the driver only if it's null
-	        if (driver == null) {
-	            switch (browser.toLowerCase()) {
-	                case "chrome":
-	                    WebDriverManager.chromedriver().setup();
-	                    driver = new ChromeDriver();
-	                    break;
-	                case "firefox":
-	                    WebDriverManager.firefoxdriver().setup();
-	                    driver = new FirefoxDriver();
-	                    break;
-	                case "edge":
-	                    WebDriverManager.edgedriver().setup();
-	                    driver = new EdgeDriver();
-	                    break;
-	                default:
-	                    System.out.println("Invalid browser type! Please select 'chrome', 'firefox', or 'edge'.");
-	                    return driver;
-	            }
+	public static WebDriver launchBrowser(String browser) {
+		// Initialize the driver only if it's null
+		if (driver == null) {
+			switch (browser.toLowerCase()) {
+			case "chrome":
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				break;
+			case "firefox":
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				break;
+			case "edge":
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
+				break;
+			default:
+				System.out.println("Invalid browser type! Please select 'chrome', 'firefox', or 'edge'.");
+				return driver;
+			}
 
-	            // Configure WebDriver settings
-	            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	            driver.manage().window().maximize();
-	        }
-			return driver;
-	    }
+			// Configure WebDriver settings
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			driver.manage().window().maximize();
+		}
+		return driver;
+	}
 
-	    // Optionally, a method to quit the driver after use
-	    public static void quitDriver() {
-	        if (driver != null) {
-	            driver.quit();
-	            driver = null; // Reset driver to null after quitting
-	        }
-	    }
+	// Optionally, a method to quit the driver after use
+	public static void quitDriver() {
+		if (driver != null) {
+			driver.quit();
+			driver = null; // Reset driver to null after quitting
+		}
+	}
+
+	/*****************************************************************************************************************************************************************************************************/
+	public static class js {
+
+		public static void Click(WebElement element) {
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", element);
+			System.out.println("Click action performed successfully using JavaScriptExecutor.");
+			System.out.println(" ");
+		}
+	}
+
 }

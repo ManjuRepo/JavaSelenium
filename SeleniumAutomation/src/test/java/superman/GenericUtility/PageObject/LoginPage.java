@@ -60,10 +60,10 @@ public class LoginPage extends BaseClass {
 		element = null;
 		try {
 			element = driver.findElement(By.xpath("//*[text()='Continue']"));
-			System.out.println("btn_Continue found in Landing_Page");
+			System.out.println("btn_Continue found in Login_Page");
 			System.out.println(" ");
 		} catch (Exception e) {
-			System.out.println("btn_Continue OneLogin not found in Landing_Page");
+			System.out.println("btn_Continue OneLogin not found in Login_Page");
 			System.out.println(" ");
 			throw (e);
 		}

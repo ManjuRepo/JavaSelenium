@@ -18,7 +18,7 @@ public class Login extends LoginPage {
 		System.out.println(" ");
 
 		LoginPage.txt_UserID().sendKeys(BaseClass.username);
-		System.out.println("Action Performed on txt_UserID");
+		System.out.println("Action Performed on txt_UserID : " + BaseClass.username);
 		System.out.println(" ");
 
 		LoginPage.btn_Continue().click();
@@ -26,14 +26,14 @@ public class Login extends LoginPage {
 		System.out.println(" ");
 
 		LoginPage.txt_Password().sendKeys(BaseClass.password);
-		System.out.println("Action Performed on txt_Password");
+		System.out.println("Action Performed on txt_Password : " + BaseClass.password);
 		System.out.println(" ");
 
 		LoginPage.btn_Continue().click();
 		System.out.println("Action Performed on btn_Continue");
 		System.out.println(" ");
 
-		System.out.println("Login Application Completed Successfully");
+		System.out.println("Login to Application Completed Successfully");
 		System.out.println(" ");
 	}
 

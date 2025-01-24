@@ -19,8 +19,10 @@ public class LogOutPage extends BaseClass {
 		try {
 			element = driver.findElement(By.xpath("//*[text()='Logout']"));
 			System.out.println("btn_Logout found in Landing_Page");
+			System.out.println(" ");
 		} catch (Exception e) {
 			System.out.println("btn_Logout not found in Landing_Page");
+			System.out.println(" ");
 			throw (e);
 		}
 		return element;
@@ -32,8 +34,10 @@ public class LogOutPage extends BaseClass {
 		try {
 			element = driver.findElement(By.xpath("//*[text()='Cancel']"));
 			System.out.println("btn_Cancel found on PopUp in Landing_Page");
+			System.out.println(" ");
 		} catch (Exception e) {
 			System.out.println("btn_Cancel not found on PopUp in Landing_Page");
+			System.out.println(" ");
 			throw (e);
 		}
 		return element;
@@ -45,8 +49,10 @@ public class LogOutPage extends BaseClass {
 		try {
 			element = driver.findElement(By.xpath("//*[text()='Ok']"));
 			System.out.println("btn_Ok found on PopUp in Landing_Page");
+			System.out.println(" ");
 		} catch (Exception e) {
 			System.out.println("btn_Ok not found on PopUp in Landing_Page");
+			System.out.println(" ");
 			throw (e);
 		}
 		return element;

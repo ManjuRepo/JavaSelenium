@@ -10,13 +10,16 @@ public class LogOut extends LogOutPage {
 		System.out.println("Action Performed on btn_Logout");
 		System.out.println(" ");
 
-		LogOutPage.btn_Ok().click();
+		// LogOutPage.btn_Ok().click();
+		js.Click(LogOutPage.btn_Ok());
 		System.out.println("Action Performed on btn_Ok");
 		System.out.println(" ");
 
-		LogOutPage.btn_Cancel().click();
-		System.out.println("Action Performed on btn_Cancel");
-		System.out.println(" ");
+		/*
+		 * LogOutPage.btn_Cancel().click();
+		 * System.out.println("Action Performed on btn_Cancel");
+		 * System.out.println(" ");
+		 */
 
 		System.out.println("LogOut Application Completed Successfully");
 		System.out.println(" ");
