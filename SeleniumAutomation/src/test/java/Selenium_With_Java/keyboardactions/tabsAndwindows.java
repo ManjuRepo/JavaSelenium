@@ -10,14 +10,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.interactions.Actions;
 
-import superman.GenericUtility.PageObject.BrowserFactory;
+import Selenium_With_Java.genric.Utilities;
 
-public class tabsAndwindows extends BrowserFactory {
+public class tabsAndwindows extends Utilities {
 	static String URL = "https://testautomationpractice.blogspot.com/#";
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		WebDriver driver = BrowserFactory.launchBrowser("chrome", URL);
+		WebDriver driver = Utilities.launchBrowser("chrome", URL);
 		if (driver != null) {
 			WebElement GUI = driver.findElement(By.xpath("//a[normalize-space()='GUI Elements']"));
 			Actions Act = new Actions(driver);

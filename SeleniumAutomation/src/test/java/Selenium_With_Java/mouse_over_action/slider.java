@@ -5,14 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import superman.GenericUtility.PageObject.BrowserFactory;
+import Selenium_With_Java.genric.Utilities;
 
-public class slider extends BrowserFactory {
+public class slider extends Utilities {
 	static String URL = "https://testautomationpractice.blogspot.com/#";
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		WebDriver driver = BrowserFactory.launchBrowser("chrome", URL);
+		WebDriver driver = Utilities.launchBrowser("chrome", URL);
 		if (driver != null) {
 			WebElement Min = driver.findElement(By.xpath("//div[@id='HTML7']//span[1]"));
 			WebElement Max = driver.findElement(By.xpath("//*[@id='slider-range']//span[2]"));

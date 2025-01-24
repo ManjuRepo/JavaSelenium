@@ -3,9 +3,9 @@ package Selenium_With_Java.uploadDocument;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import superman.GenericUtility.PageObject.BrowserFactory;
+import Selenium_With_Java.genric.Utilities;
 
-public class uploadfile extends BrowserFactory {
+public class uploadfile extends Utilities {
 
 	static String URL = "https://davidwalsh.name/demo/multiple-file-upload.php";
 	static String File = "C:\\Users\\Admin\\Desktop\\Masked Adhar card Manju.pdf";
@@ -13,7 +13,7 @@ public class uploadfile extends BrowserFactory {
 
 	public static void main(String[] args) {
 
-		WebDriver driver = BrowserFactory.launchBrowser("chrome", URL);
+		WebDriver driver = Utilities.launchBrowser("chrome", URL);
 		if (driver != null) {
 
 			driver.findElement(By.xpath("//input[@id='filesToUpload']")).sendKeys(File + "\n" + File);

@@ -9,14 +9,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import superman.GenericUtility.PageObject.BrowserFactory;
+import Selenium_With_Java.genric.Utilities;
 
-public class specific_area_from_page extends BrowserFactory {
+public class specific_area_from_page extends Utilities {
 	static String URL = "https://testautomationpractice.blogspot.com/";
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		WebDriver driver = BrowserFactory.launchBrowser("chrome", URL);
+		WebDriver driver = Utilities.launchBrowser("chrome", URL);
 		if (driver != null) {
 			WebElement Ele = driver.findElement(By.xpath("(//*[@class='container'])[2]"));
 			File sorce = Ele.getScreenshotAs(OutputType.FILE);

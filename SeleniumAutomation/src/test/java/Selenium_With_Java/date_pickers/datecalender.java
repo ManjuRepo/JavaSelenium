@@ -6,9 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import superman.GenericUtility.PageObject.BrowserFactory;
+import Selenium_With_Java.genric.Utilities;
 
-public class datecalender extends BrowserFactory {
+public class datecalender extends Utilities {
 
 	static String Day = "18";
 	static String Month = "October";
@@ -43,7 +43,7 @@ public class datecalender extends BrowserFactory {
 
 	public static void main(String[] args) throws InterruptedException {
 		// Launch the specified browser and navigate to the URL
-		WebDriver driver = BrowserFactory.launchBrowser("chrome", URL);
+		WebDriver driver = Utilities.launchBrowser("chrome", URL);
 		if (driver != null) {
 			// Perform actions with the driver...
 			driver.switchTo().frame(0);

@@ -6,14 +6,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import superman.GenericUtility.PageObject.BrowserFactory;
+import Selenium_With_Java.genric.Utilities;
 
-public class fullpage extends BrowserFactory {
+public class fullpage extends Utilities {
 	static String URL = "https://testautomationpractice.blogspot.com/";
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		WebDriver driver = BrowserFactory.launchBrowser("chrome", URL);
+		WebDriver driver = Utilities.launchBrowser("chrome", URL);
 		if (driver != null) {
 			try {
 				TakesScreenshot ts = (TakesScreenshot) driver;

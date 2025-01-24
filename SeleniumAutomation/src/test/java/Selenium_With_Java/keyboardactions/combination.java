@@ -6,14 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import superman.GenericUtility.PageObject.BrowserFactory;
+import Selenium_With_Java.genric.Utilities;
 
-public class combination extends BrowserFactory {
+public class combination extends Utilities {
 	static String URL = "https://text-compare.com/";
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		WebDriver driver = BrowserFactory.launchBrowser("chrome", URL);
+		WebDriver driver = Utilities.launchBrowser("chrome", URL);
 		if (driver != null) {
 			WebElement TextArea = driver.findElement(By.xpath("//textarea[@id='inputText1']"));
 			Actions Act = new Actions(driver);
