@@ -2,11 +2,10 @@ package superman.Library.Templete;
 
 import superman.Generic.BaseClass;
 import superman.GenericUtility.Login;
-import superman.GenericUtility.Module;
 import superman.GenericUtility.SetEnvironment;
 import superman.Library.Utility.Constant;
 
-public class Excise_TLMSH_Real_Time_Templ extends BaseClass {
+public class TLMSH_Real_Time_Templ extends BaseClass {
 
 	static {
 		// Load properties when the class is loaded
@@ -19,8 +18,8 @@ public class Excise_TLMSH_Real_Time_Templ extends BaseClass {
 		 *************************************************************************************************************************************************************/
 		SetEnvironment.Execute();
 		Login.Execute();
-		if(Constant.Plan) {
-		Module.Execute(BaseClass.SuperManModule);
+		if (Constant.Plan) {
+			TLM_SH_DataObjects.PlanAndMeet();
 		}
 	}
 }

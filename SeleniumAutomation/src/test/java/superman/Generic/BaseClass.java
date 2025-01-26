@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -23,6 +24,7 @@ public class BaseClass {
 	public static String browser;
 	public static String SuperManModule;
 	public static WebDriver driver;
+	public static Actions Act;
 
 	// Public static method to load properties
 	public static void loadProperties() {
@@ -83,15 +85,29 @@ public class BaseClass {
 	}
 
 	/*****************************************************************************************************************************************************************************************************/
-	public static class js {
+	public static class Js {
 
 		public static void Click(WebElement element) {
 
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", element);
-			System.out.println("Click action performed successfully using JavaScriptExecutor.");
-			System.out.println(" ");
+			JavascriptExecutor Js = (JavascriptExecutor) driver;
+			Js.executeScript("arguments[0].click();", element);
 		}
 	}
 
+	/*****************************************************************************************************************************************************************************************************/
+	public static class Action {
+
+		public static void Doubleclick(WebElement element) {
+			Act = new Actions(driver);
+			Act.doubleClick(element).perform();
+		}
+
+		public static void Click(WebElement element) {
+			Act.click(element).perform();
+		}
+
+		public static void MoveToElement(WebElement element) {
+			Act.moveToElement(element).perform();
+		}
+	}
 }

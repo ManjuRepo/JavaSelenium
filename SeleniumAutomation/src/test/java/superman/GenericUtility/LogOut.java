@@ -1,5 +1,6 @@
 package superman.GenericUtility;
 
+import superman.Generic.BaseClass;
 import superman.GenericUtility.PageObject.LogOutPage;
 
 public class LogOut extends LogOutPage {
@@ -11,7 +12,7 @@ public class LogOut extends LogOutPage {
 		System.out.println(" ");
 
 		// LogOutPage.btn_Ok().click();
-		js.Click(LogOutPage.btn_Ok());
+		Js.Click(LogOutPage.btn_Ok());
 		System.out.println("Action Performed on btn_Ok");
 		System.out.println(" ");
 
@@ -23,6 +24,8 @@ public class LogOut extends LogOutPage {
 
 		System.out.println("LogOut Application Completed Successfully");
 		System.out.println(" ");
+
+		BaseClass.driver.quit();
 	}
 
 }
