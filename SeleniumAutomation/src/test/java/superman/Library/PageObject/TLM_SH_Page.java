@@ -17,7 +17,7 @@ public class TLM_SH_Page extends BaseClass {
 		element = null;
 
 		try {
-			element = driver.findElement(By.xpath("//*[text()='Plan & Meet']"));
+			element = driver.findElement(By.xpath("//*[@data-testid='label_Plan & Meet']"));
 			System.out.println("btn_PlanAndMeet found in Landing_Page");
 			System.out.println(" ");
 		} catch (Exception e) {
