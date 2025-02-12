@@ -2,8 +2,8 @@ package superman.GenericUtility;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
 import superman.Generic.BaseClass;
-import superman.Generic.BaseClass.Action;
 
 public class Module {
 
@@ -16,7 +16,7 @@ public class Module {
 		try {
 			element = BaseClass.driver.findElement(By.xpath("//*[@data-testid='button_Plan & Meet']"));
 			Thread.sleep(5000);
-			Action.Doubleclick(element);
+			Doubleclick(element);
 			System.out.println(Val + " " + "found in Landing_Page");
 			System.out.println(" ");
 			System.out.println("Action Performed on : " + "" + Val);
@@ -26,5 +26,10 @@ public class Module {
 			System.out.println(" ");
 			throw (e);
 		}
+	}
+
+	private static void Doubleclick(WebElement element2) {
+		// TODO Auto-generated method stub
+		
 	}
 }

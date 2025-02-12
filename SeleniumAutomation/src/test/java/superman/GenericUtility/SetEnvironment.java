@@ -7,7 +7,7 @@ import superman.Generic.BaseClass;
 public class SetEnvironment extends BaseClass {
 
 	static {
-		BaseClass.loadProperties();
+		loadProperties();
 	}
 	static WebDriver driver = BaseClass.launchBrowser(BaseClass.browser);
 

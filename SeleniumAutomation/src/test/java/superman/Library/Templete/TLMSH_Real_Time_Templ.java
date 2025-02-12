@@ -7,11 +7,6 @@ import superman.Library.Utility.Constant;
 
 public class TLMSH_Real_Time_Templ extends BaseClass {
 
-	static {
-		// Load properties when the class is loaded
-		BaseClass.loadProperties();
-	}
-
 	public static void Execute() throws Exception {
 		/*************************************************************************************************************************************************************
 		 * Environment Setup and Login

@@ -28,4 +28,17 @@ public class TLM_SH_Page extends BaseClass {
 		return element;
 	}
 
+	public static WebElement DailyPlan() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[text()='Daily Plan']"));
+
+		} catch (Exception e) {
+			throw (e);
+		}
+		return element;
+	}
+
 }

@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +24,7 @@ public class BaseClass {
 	public static String SuperManModule;
 	public static WebDriver driver;
 	public static Actions Act;
+	private static int delayInSeconds = 1;
 
 	// Public static method to load properties
 	public static void loadProperties() {
@@ -35,7 +35,7 @@ public class BaseClass {
 			properties.load(file);
 
 			// Fetch individual values and store in static variables
-			url = properties.getProperty("UATURL");
+			url = properties.getProperty("URL");
 			username = properties.getProperty("UserName");
 			password = properties.getProperty("Password");
 			browser = properties.getProperty("browser");
@@ -72,6 +72,7 @@ public class BaseClass {
 			// Configure WebDriver settings
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.manage().window().maximize();
+
 		}
 		return driver;
 	}
@@ -85,39 +86,67 @@ public class BaseClass {
 	}
 
 	/*****************************************************************************************************************************************************************************************************/
-	public static class Js {
 
-		public static void Click(WebElement element) {
-
-			JavascriptExecutor Js = (JavascriptExecutor) driver;
-			Js.executeScript("arguments[0].click();", element);
+	public static void delay() {
+		try {
+			Thread.sleep(delayInSeconds * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
 	}
+	public static void JsClick(WebElement element) {
 
+		JavascriptExecutor Js = (JavascriptExecutor) driver;
+		Js.executeScript("arguments[0].click();", element);
+		delay();
+	}
+
+	public static void get(String url) {
+		driver.get(url);
+		delay();
+	}
+
+	public static void quit() {
+		driver.quit();
+	}
+
+	public static void close() {
+		driver.close();
+	}
+
+	public static void click(WebElement element) {
+		element.click();
+		delay();
+	}
+
+	public static void sendKeys(WebElement element, String text) {
+		element.sendKeys(text);
+		delay();
+	}
+
+	public static void moveToElement(WebElement element) {
+		new Actions(driver).moveToElement(element).perform();
+		delay();
+	}
+
+	public static void Doubleclick(WebElement element) {
+		new Actions(driver).doubleClick(element).perform();
+	}
+
+	public static void ActionClick(WebElement element) {
+		new Actions(driver).click(element).perform();
+	}
+
+	public static String gettext(WebElement Value) {
+		Value.getText();
+		delay();
+		return null;
+	}
+
+	public static String PageTitle() {
+		driver.getTitle();
+		delay();
+		return null;
+	}
 	/*****************************************************************************************************************************************************************************************************/
-	public static class Action {
-
-		public static void Doubleclick(WebElement element) {
-			Act = new Actions(driver);
-			Act.doubleClick(element).perform();
-		}
-
-		public static void Click(WebElement element) {
-			Act.click(element).perform();
-		}
-
-		public static void MoveToElement(WebElement element) {
-			Act.moveToElement(element).perform();
-		}
-	}
-
-	/*****************************************************************************************************************************************************************************************************/
-	public static class Get {
-
-		public static void Text(WebElement ele) {
-
-			ele.getText();
-		}
-		/*****************************************************************************************************************************************************************************************************/
-	}
 }
