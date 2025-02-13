@@ -9,7 +9,7 @@ public class TLM_SH_Page extends BaseClass {
 	private static WebElement element;
 	static {
 		// Load properties when the class is loaded
-		BaseClass.loadProperties();
+		loadProperties();
 	}
 
 	public static WebElement btn_PlanAndMeet() throws Exception {
