@@ -19,10 +19,9 @@ public class RecruitmentPage extends BaseClass {
 
 		try {
 			element = driver.findElement(By.xpath("//*[text()='Recruitment']"));
-			System.out.println("btn_Recruitment found in Home_Page");
-			System.out.println(" ");
+			System.out.println("\033[1m btn_Recruitment \033[0m found in Home_Page");
 		} catch (Exception e) {
-			System.out.println("btn_Recruitment not found in Home_Page");
+			System.out.println("\033[1m btn_Recruitment \033[0m not found in Home_Page");
 			System.out.println(" ");
 			throw (e);
 		}
@@ -35,26 +34,24 @@ public class RecruitmentPage extends BaseClass {
 
 		try {
 			element = driver.findElement(By.xpath("//*[text()='Candidates']"));
-			System.out.println("btn_Candidates found in Recruitment_Page");
-			System.out.println(" ");
+			System.out.println("\033[1m btn_Candidates \033[0m found in Recruitment_Page");
 		} catch (Exception e) {
-			System.out.println("btn_Candidates not found in Recruitment_Page");
+			System.out.println("\033[1m btn_Candidates \033[0m not found in Recruitment_Page");
 			System.out.println(" ");
 			throw (e);
 		}
 		return element;
 	}
 	
-	public static WebElement DD_JobTitle() throws Exception {
+	public static WebElement Sel_JobTitle() throws Exception {
 
 		element = null;
 
 		try {
 			element = driver.findElement(By.xpath("//*[text()='Job Title']//following::i"));
-			System.out.println("JobTitle Drop Down found in Recruitment_Page");
-			System.out.println(" ");
+			System.out.println("\033[1m JobTitle Drop Down \033[0m found in Recruitment_Page");
 		} catch (Exception e) {
-			System.out.println("JobTitle Drop Down not found in Recruitment_Page");
+			System.out.println("\033[1m JobTitle Drop Down \033[0m not found in Recruitment_Page");
 			System.out.println(" ");
 			throw (e);
 		}

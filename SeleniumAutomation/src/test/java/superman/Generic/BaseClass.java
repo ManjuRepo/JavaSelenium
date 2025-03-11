@@ -4,9 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -52,7 +52,7 @@ public class BaseClass {
 			SuperManModule = properties.getProperty("SuperManModule");
 			filePath = properties.getProperty("filePath");
 			sheetName = properties.getProperty("sheetName");
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new RuntimeException("Failed to load properties from: " + FILE_PATH);
@@ -162,8 +162,8 @@ public class BaseClass {
 		return null;
 	}
 
-	public static void selectDropdownByValue(WebElement element, String value) {
-		new Select(element).selectByValue(value);
+	public static void selectDropdownByValue(WebElement element, String object) {
+		new Select(element).selectByValue(object);
 	}
 
 	public static void selectDropdownByText(WebElement element, String text) {
@@ -176,14 +176,20 @@ public class BaseClass {
 
 	/*****************************************************************************************************************************************************************************************************/
 
-	public static void ExcelData(String filePath, String sheetName, String columnHeader) throws IOException {
+	public static String readExcelColumn(String filePath, String sheetName, String columnHeader) throws IOException {
 		FileInputStream file = new FileInputStream(filePath);
 		Workbook workbook = new XSSFWorkbook(file);
 		Sheet sheet = workbook.getSheet(sheetName);
 		int columnIdx = -1;
 
-		// **Find the header column index**
+		// Find the header column index
 		Row headerRow = sheet.getRow(0); // Assuming headers are in the first row
+		if (headerRow == null) {
+			workbook.close();
+			file.close();
+			return null;
+		}
+
 		for (Cell cell : headerRow) {
 			if (cell.getStringCellValue().trim().equalsIgnoreCase(columnHeader)) {
 				columnIdx = cell.getColumnIndex();
@@ -192,28 +198,31 @@ public class BaseClass {
 		}
 
 		if (columnIdx == -1) {
-			// System.out.println("Header '" + columnHeader + "' not found.");
 			workbook.close();
 			file.close();
-			return;
+			return null; // Return null if header not found
 		}
 
-		// **Loop through rows and get values under the column**
+		StringBuilder columnData = new StringBuilder();
+		DataFormatter formatter = new DataFormatter();
+
+		// Loop through rows and get values under the column
 		for (int i = 1; i <= sheet.getLastRowNum(); i++) {
 			Row row = sheet.getRow(i);
 			if (row == null)
-				break; // Stop if the row is empty
+				continue; // Skip empty rows
 
 			Cell cell = row.getCell(columnIdx);
 			if (cell == null || cell.getCellType() == CellType.BLANK)
-				break; // Stop if the cell is empty
+				continue; // Skip empty cells
 
-			// String cellValue = cell.toString(); // Convert value to string
-			// System.out.println("Row " + i + " - " + columnHeader + ": " + cellValue);
+			columnData.append(formatter.formatCellValue(cell)).append("\n");
 		}
 
 		workbook.close();
 		file.close();
+
+		return columnData.toString().trim(); // Return collected data
 	}
-	/*****************************************************************************************************************************************************************************************************/
 }
+/*****************************************************************************************************************************************************************************************************/

@@ -13,10 +13,12 @@ public class SetEnvironment extends BaseClass {
 
 	public static void Execute() {
 
-		System.out.println("Launching : " + "" + browser + " " + "browser");
+		System.out.println("Launching :: \033[1m" + browser + " " + "browser \033[0m");
 		System.out.println(" ");
 		get(url);
-		System.out.println("Application Launched : " + PageTitle() + " :: " + url);
+		delay();
+		System.out
+				.println("Application Launched :: \033[1m" + PageTitle() + "\033[0m :: " + "\033[1m" + url + "\033[0m");
 		System.out.println(" ");
 	}
 }

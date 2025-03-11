@@ -18,10 +18,9 @@ public class LoginPage extends BaseClass {
 		element = null;
 		try {
 			element = driver.findElement(By.name("username"));
-			System.out.println("txt_Username found in Login Page");
-			System.out.println(" ");
+			System.out.println("\033[1m txt_Username \033[0m found in Login Page");
 		} catch (Exception e) {
-			System.out.println("txt_Username not found in Login Page");
+			System.out.println("\033[1m txt_Username \033[0m not found in Login Page");
 			System.out.println(" ");
 			throw (e);
 		}
@@ -33,10 +32,9 @@ public class LoginPage extends BaseClass {
 		element = null;
 		try {
 			element = driver.findElement(By.name("password"));
-			System.out.println("txt_password found in Login Page");
-			System.out.println(" ");
+			System.out.println("\033[1m txt_password \033[0m found in Login Page");
 		} catch (Exception e) {
-			System.out.println("txt_password not found in Login Page");
+			System.out.println("\033[1m txt_password \033[0m not found in Login Page");
 			System.out.println(" ");
 			throw (e);
 		}
@@ -48,10 +46,9 @@ public class LoginPage extends BaseClass {
 		element = null;
 		try {
 			element = driver.findElement(By.xpath("//*[contains(@class,'login-button')]"));
-			System.out.println("btn_login found in Login Page");
-			System.out.println(" ");
+			System.out.println("\033[1m btn_login \033[0m found in Login Page");
 		} catch (Exception e) {
-			System.out.println("btn_login not found in Login Page");
+			System.out.println("\033[1m btn_login \033[0m not found in Login Page");
 			System.out.println(" ");
 			throw (e);
 		}
