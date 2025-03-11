@@ -23,5 +23,7 @@ public class Login extends LoginPage {
 		click(btn_login());
 		System.out.println("Action Performed on :: \033[1m Login Button \033[0m");
 		System.out.println("");
+		System.out.println("\033[1m **Successfully Logged into :: " + PageTitle() + "\033[0m**");
+		System.out.println("");
 	}
 }

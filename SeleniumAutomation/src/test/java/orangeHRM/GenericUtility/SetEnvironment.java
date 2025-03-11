@@ -18,7 +18,7 @@ public class SetEnvironment extends BaseClass {
 		get(url);
 		delay();
 		System.out
-				.println("Application Launched :: \033[1m" + PageTitle() + "\033[0m :: " + "\033[1m" + url + "\033[0m");
+				.println("Application Launched :: \033[1m" + url + "\033[0m");
 		System.out.println(" ");
 	}
 }

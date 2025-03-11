@@ -164,14 +164,17 @@ public class BaseClass {
 
 	public static void selectDropdownByValue(WebElement element, String object) {
 		new Select(element).selectByValue(object);
+		delay();
 	}
 
 	public static void selectDropdownByText(WebElement element, String text) {
 		new Select(element).selectByVisibleText(text);
+		delay();
 	}
 
 	public static void selectDropdownByIndex(WebElement element, int index) {
 		new Select(element).selectByIndex(index);
+		delay();
 	}
 
 	/*****************************************************************************************************************************************************************************************************/
