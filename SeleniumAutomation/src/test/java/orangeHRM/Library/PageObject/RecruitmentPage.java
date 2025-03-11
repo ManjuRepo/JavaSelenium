@@ -75,6 +75,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_Vacancy() throws Exception {
 
 		element = null;
@@ -89,6 +90,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_VacancyVal(String Val) throws Exception {
 
 		element = null;
@@ -106,6 +108,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_HiringManager() throws Exception {
 
 		element = null;
@@ -120,6 +123,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_HiringManagerVal(String Val) throws Exception {
 
 		element = null;
@@ -137,6 +141,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_Status() throws Exception {
 
 		element = null;
@@ -151,6 +156,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_StatusVal(String Val) throws Exception {
 
 		element = null;
@@ -168,6 +174,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_CandidateName() throws Exception {
 
 		element = null;
@@ -182,6 +189,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_CandidateNameVal(String Val) throws Exception {
 
 		element = null;
@@ -199,6 +207,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_MethodOfApplication() throws Exception {
 
 		element = null;
@@ -213,6 +222,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement Sel_MethodOfApplicationVal(String Val) throws Exception {
 
 		element = null;
@@ -230,6 +240,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement txt_CandidateName() throws Exception {
 
 		element = null;
@@ -244,6 +255,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement txt_Keywords() throws Exception {
 
 		element = null;
@@ -258,6 +270,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement btn_Reset() throws Exception {
 
 		element = null;
@@ -272,6 +285,7 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+
 	public static WebElement btn_Search() throws Exception {
 
 		element = null;
@@ -281,6 +295,36 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m btn_Search \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_Search Drop Down \033[0m :: not found in Recruitment_Page");
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+
+	public static WebElement txt_FromDateOfApplication() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[text()='Date of Application']/parent::*/parent::*//input"));
+			System.out.println("\033[1m txt_FromDateOfApplication \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m txt_FromDateOfApplication \033[0m :: not found in Recruitment_Page");
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+
+	public static WebElement txt_ToDateOfApplication() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[@placeholder='To']"));
+			System.out.println("\033[1m txt_ToDateOfApplication \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m txt_ToDateOfApplication \033[0m :: not found in Recruitment_Page");
 			System.out.println(" ");
 			throw (e);
 		}

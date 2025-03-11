@@ -6,7 +6,7 @@ public class HRM extends RecruitmentPage {
 	
 	public static void RecruitmentsNavigation() throws Exception {
 
-		System.out.println("\033[1m Navigate to Recruitment \033[0m");
+		System.out.println("\033[1m ---Navigate to Recruitment--- \033[0m");
 		System.out.println("");
 		
 		click(btn_Recruitment());

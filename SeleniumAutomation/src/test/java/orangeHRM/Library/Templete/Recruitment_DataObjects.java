@@ -16,4 +16,18 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 				+ " JobTitle Drop Down \033[0m");
 		System.out.println("");
 	}
+
+	public static void FromDate() throws IOException, Exception {
+		sendKeys(txt_FromDateOfApplication(), readExcelColumn(filePath, "Recruitment", "From"));
+		System.out.println("Action Performed on :: \033[1m Date of Application (From) "
+				+ readExcelColumn(filePath, "Recruitment", "From") + "\033[0m");
+		System.out.println("");
+	}
+
+	public static void ToDate() throws IOException, Exception {
+		sendKeys(txt_ToDateOfApplication(), readExcelColumn(filePath, "Recruitment", "To"));
+		System.out.println("Action Performed on :: \033[1m Date of Application (To) "
+				+ readExcelColumn(filePath, "Recruitment", "To") + " \033[0m");
+		System.out.println("");
+	}
 }

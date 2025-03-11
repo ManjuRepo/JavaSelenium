@@ -19,7 +19,6 @@ public class LogOutPage extends BaseClass {
 		try {
 			element = driver.findElement(By.xpath("//*[contains(@class,'oxd-userdropdown-icon')]"));
 			System.out.println("\033[1m btn_userdropdown \033[0m :: found in Home Page");
-			System.out.println(" ");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_userdropdown \033[0m :: not found in Home Page");
 			System.out.println(" ");
@@ -34,7 +33,6 @@ public class LogOutPage extends BaseClass {
 		try {
 			element = driver.findElement(By.xpath("//*[text()='Logout']"));
 			System.out.println("\033[1m btn_logout \033[0m :: found in Home Page");
-			System.out.println(" ");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_logout \033[0m :: not found in Home Page");
 			System.out.println(" ");
