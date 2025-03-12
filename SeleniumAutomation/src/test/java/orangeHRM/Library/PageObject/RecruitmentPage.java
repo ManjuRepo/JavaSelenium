@@ -22,6 +22,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m btn_Recruitment \033[0m :: found in Home_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_Recruitment \033[0m :: not found in Home_Page");
+			TakeScreenshot(driver, "btn_Recruitment");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -37,6 +39,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m btn_Candidates \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_Candidates \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "btn_Candidates");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -52,6 +56,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m JobTitle Drop Down \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m JobTitle Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "Sel_JobTitle");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -70,6 +76,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m " + Val + "\033[0m :: found in JobTitle Drop Down");
 		} catch (Exception e) {
 			System.out.println("\033[1m " + Val + " \033[0m :: not found in JobTitle Drop Down");
+			TakeScreenshot(driver, "Sel_JobTitleVal");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -85,6 +93,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m Vacancy Drop Down \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m Vacancy Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "Sel_Vacancy");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -103,6 +113,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m " + Val + "\033[0m :: found in Vacancy Drop Down");
 		} catch (Exception e) {
 			System.out.println("\033[1m " + Val + " \033[0m :: not found in Vacancy Drop Down");
+			TakeScreenshot(driver, "Sel_VacancyVal");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -118,6 +130,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m Hiring Manager Drop Down \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m Hiring Manager Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "Sel_HiringManager");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -136,6 +150,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m " + Val + "\033[0m :: found in Hiring Manager Drop Down");
 		} catch (Exception e) {
 			System.out.println("\033[1m " + Val + " \033[0m :: not found in Hiring Manager Drop Down");
+			TakeScreenshot(driver, "Sel_HiringManagerVal");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -151,6 +167,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m Status Drop Down \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m Status Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "Sel_Status");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -169,6 +187,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m " + Val + "\033[0m :: found in Status Drop Down");
 		} catch (Exception e) {
 			System.out.println("\033[1m " + Val + " \033[0m :: not found in Status Drop Down");
+			TakeScreenshot(driver, "Sel_StatusVal");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -184,6 +204,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m Method of Application Drop Down \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m Method of Application Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "Sel_MethodOfApplication");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -202,6 +224,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m " + Val + "\033[0m :: found in Method of Application Drop Down");
 		} catch (Exception e) {
 			System.out.println("\033[1m " + Val + " \033[0m :: not found in Method of Application Drop Down");
+			TakeScreenshot(driver, "Sel_MethodOfApplicationVal");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -217,6 +241,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m txt_CandidateName \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m txt_CandidateName Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_CandidateName");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -232,6 +258,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m txt_Keywords \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m txt_Keywords Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_Keywords");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -247,6 +275,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m btn_Reset \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_Reset Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "btn_Reset");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -262,6 +292,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m btn_Search \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_Search Drop Down \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "btn_Search");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -277,6 +309,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m txt_FromDateOfApplication \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m txt_FromDateOfApplication \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_FromDateOfApplication");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -292,6 +326,8 @@ public class RecruitmentPage extends BaseClass {
 			System.out.println("\033[1m txt_ToDateOfApplication \033[0m :: found in Recruitment_Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m txt_ToDateOfApplication \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_ToDateOfApplication");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}

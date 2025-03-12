@@ -21,7 +21,9 @@ public class LoginPage extends BaseClass {
 			System.out.println("\033[1m txt_Username \033[0m :: found in Login Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m txt_Username \033[0m :: not found in Login Page");
-			System.out.println(" ");
+			TakeScreenshot(driver, "txt_Username");
+			System.out.println(e);
+			System.out.println("");
 			throw (e);
 		}
 		return element;
@@ -35,6 +37,8 @@ public class LoginPage extends BaseClass {
 			System.out.println("\033[1m txt_password \033[0m :: found in Login Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m txt_password \033[0m :: not found in Login Page");
+			TakeScreenshot(driver, "txt_password");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -49,6 +53,8 @@ public class LoginPage extends BaseClass {
 			System.out.println("\033[1m btn_login \033[0m :: found in Login Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_login \033[0m :: not found in Login Page");
+			TakeScreenshot(driver, "btn_login");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}

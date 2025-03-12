@@ -21,6 +21,8 @@ public class LogOutPage extends BaseClass {
 			System.out.println("\033[1m btn_userdropdown \033[0m :: found in Home Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_userdropdown \033[0m :: not found in Home Page");
+			TakeScreenshot(driver, "btn_userdropdown");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}
@@ -35,6 +37,8 @@ public class LogOutPage extends BaseClass {
 			System.out.println("\033[1m btn_logout \033[0m :: found in Home Page");
 		} catch (Exception e) {
 			System.out.println("\033[1m btn_logout \033[0m :: not found in Home Page");
+			TakeScreenshot(driver, "btn_logout");
+			System.out.println(e);
 			System.out.println(" ");
 			throw (e);
 		}

@@ -38,7 +38,7 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 				+ "from HiringManager Drop Down \033[0m");
 		System.out.println("");
 	}
-	
+
 	public static void Status() throws IOException, Exception {
 
 		click(Sel_Status());
@@ -49,27 +49,28 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 				+ "from Status Drop Down \033[0m");
 		System.out.println("");
 	}
-	
-	public static void  CandidateName() throws IOException, Exception{
+
+	public static void CandidateName() throws IOException, Exception {
 		sendKeys(txt_CandidateName(), readExcelColumn(filePath, "Recruitment", "CandidateName"));
-		System.out.println("Action Performed on :: \033[1m CandidateName \033[0m" + "text field" );
+		System.out.println("Action Performed on :: \033[1m CandidateName \033[0m" + "text field");
 		System.out.println("");
 	}
-	
-	public static void  Keywords() throws IOException, Exception{
+
+	public static void Keywords() throws IOException, Exception {
 		sendKeys(txt_Keywords(), readExcelColumn(filePath, "Recruitment", "Keywords"));
 		System.out.println("Action Performed on :: \033[1m Keywords \033[0m" + "text field");
 		System.out.println("");
 	}
-	
+
 	public static void MethodofApplication() throws IOException, Exception {
 
 		click(Sel_MethodOfApplication());
 		System.out.println("Action Performed on :: \033[1m MethodofApplication Drop Dwon \033[0m");
 		System.out.println("");
 		click(Sel_MethodOfApplicationVal(readExcelColumn(filePath, "Recruitment", "MethodofApplication")));
-		System.out.println("Action Performed on :: \033[1m " + readExcelColumn(filePath, "Recruitment", "MethodofApplication")
-				+ "from MethodofApplication Drop Down \033[0m");
+		System.out.println(
+				"Action Performed on :: \033[1m " + readExcelColumn(filePath, "Recruitment", "MethodofApplication")
+						+ "from MethodofApplication Drop Down \033[0m");
 		System.out.println("");
 	}
 

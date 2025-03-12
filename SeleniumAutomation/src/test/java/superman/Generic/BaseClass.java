@@ -1,9 +1,14 @@
 package superman.Generic;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.Properties;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -12,6 +17,8 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -227,5 +234,27 @@ public class BaseClass {
 
 		return columnData.toString().trim(); // Return collected data
 	}
+
+	/*****************************************************************************************************************************************************************************************************/
+	public static void TakeScreenshot(WebDriver driver, String testCaseName) {
+		try {
+			// Format timestamp
+			String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+			// Take screenshot
+			File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+			// Define destination path
+			String screenshotPath = "screenshots/" + testCaseName + "_" + timestamp + ".png";
+			File destFile = new File(screenshotPath);
+
+			// Copy file to destination
+			FileUtils.copyFile(srcFile, destFile);
+
+			System.out.println("Screenshot captured :: \033[1m" + screenshotPath + "\033[0m");
+			System.out.println("");
+		} catch (IOException e) {
+			System.out.println("Failed to capture screenshot: " + e.getMessage());
+		}
+	}
 }
-/*****************************************************************************************************************************************************************************************************/
