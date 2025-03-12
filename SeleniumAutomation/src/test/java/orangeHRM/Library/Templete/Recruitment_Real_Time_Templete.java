@@ -15,8 +15,13 @@ public class Recruitment_Real_Time_Templete extends HRM{
 		HRM.RecruitmentsNavigation();
 		
 		Recruitment_DataObjects.JobTitle();
+		Recruitment_DataObjects.Vacancy();
+		Recruitment_DataObjects.HiringManager();
+		Recruitment_DataObjects.Status();
+		Recruitment_DataObjects.CandidateName();
+		Recruitment_DataObjects.Keywords();
 		Recruitment_DataObjects.FromDate();
 		Recruitment_DataObjects.ToDate();
-		
+		Recruitment_DataObjects.MethodofApplication();
 	}
 }

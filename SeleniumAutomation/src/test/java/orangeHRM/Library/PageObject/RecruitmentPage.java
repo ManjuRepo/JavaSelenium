@@ -175,39 +175,6 @@ public class RecruitmentPage extends BaseClass {
 		return element;
 	}
 
-	public static WebElement Sel_CandidateName() throws Exception {
-
-		element = null;
-
-		try {
-			element = driver.findElement(By.xpath("//*[text()='Candidate Name']/parent::div/..//i"));
-			System.out.println("\033[1m Candidate Name Drop Down \033[0m :: found in Recruitment_Page");
-		} catch (Exception e) {
-			System.out.println("\033[1m Candidate Name Drop Down \033[0m :: not found in Recruitment_Page");
-			System.out.println(" ");
-			throw (e);
-		}
-		return element;
-	}
-
-	public static WebElement Sel_CandidateNameVal(String Val) throws Exception {
-
-		element = null;
-
-		try {
-			element = driver.findElement(By.xpath(
-					"//div[@class='oxd-grid-4 orangehrm-full-width-grid'][.//label[text()='Candidate Name']]//*[contains(text(),'"
-							+ Val + "')]"));
-
-			System.out.println("\033[1m " + Val + "\033[0m :: found in Candidate Name Drop Down");
-		} catch (Exception e) {
-			System.out.println("\033[1m " + Val + " \033[0m :: not found in Candidate Name Drop Down");
-			System.out.println(" ");
-			throw (e);
-		}
-		return element;
-	}
-
 	public static WebElement Sel_MethodOfApplication() throws Exception {
 
 		element = null;
