@@ -3,8 +3,8 @@ package superman.Generic;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
 import java.util.Properties;
 
@@ -25,8 +25,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.support.events.EventFiringDecorator;
+import org.openqa.selenium.support.events.WebDriverListener;
 import org.openqa.selenium.support.ui.Select;
-
+import java.time.Duration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
@@ -67,6 +70,26 @@ public class BaseClass {
 	}
 
 	/*****************************************************************************************************************************************************************************************************/
+	
+	public static class HighlightListener implements WebDriverListener {
+
+		@Override
+		public void beforeAnyWebElementCall(WebElement element, Method method, Object[] args) {
+			WebDriver driver = ((RemoteWebElement) element).getWrappedDriver();
+			highlightElement(driver, element);
+		}
+
+		private void highlightElement(WebDriver driver, WebElement element) {
+			try {
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].style.border='3px solid red'", element);
+				Thread.sleep(200); // Delay for visibility
+			} catch (Exception e) {
+				System.out.println("Highlighting failed: " + e.getMessage());
+			}
+		}
+	}
+
 	public static WebDriver launchBrowser(String browser) {
 		// Initialize the driver only if it's null
 		if (driver == null) {
@@ -88,10 +111,12 @@ public class BaseClass {
 				return driver;
 			}
 
+			// Attach the WebDriverListener for highlighting
+			driver = new EventFiringDecorator<>(new HighlightListener()).decorate(driver);
+
 			// Configure WebDriver settings
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.manage().window().maximize();
-
 		}
 		return driver;
 	}
