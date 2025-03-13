@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import orangeHRM.Library.PageObject.RecruitmentPage;
 
-public class Recruitment_DataObjects extends RecruitmentPage {
+public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
 
 	public static void JobTitle() throws IOException, Exception {
 
@@ -13,7 +13,7 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 		System.out.println("");
 		click(Sel_JobTitleVal(readExcelColumn(filePath, "Recruitment", "JobTitle")));
 		System.out.println("Action Performed on :: \033[1m " + readExcelColumn(filePath, "Recruitment", "JobTitle")
-				+ "from JobTitle Drop Down \033[0m");
+				+ " from JobTitle Drop Down \033[0m");
 		System.out.println("");
 	}
 
@@ -24,7 +24,7 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 		System.out.println("");
 		click(Sel_VacancyVal(readExcelColumn(filePath, "Recruitment", "Vacancy")));
 		System.out.println("Action Performed on :: \033[1m " + readExcelColumn(filePath, "Recruitment", "Vacancy")
-				+ "from Vacancy Drop Down \033[0m");
+				+ " from Vacancy Drop Down \033[0m");
 		System.out.println("");
 	}
 
@@ -35,7 +35,7 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 		System.out.println("");
 		click(Sel_HiringManagerVal(readExcelColumn(filePath, "Recruitment", "HiringManager")));
 		System.out.println("Action Performed on :: \033[1m " + readExcelColumn(filePath, "Recruitment", "HiringManager")
-				+ "from HiringManager Drop Down \033[0m");
+				+ " from HiringManager Drop Down \033[0m");
 		System.out.println("");
 	}
 
@@ -46,7 +46,7 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 		System.out.println("");
 		click(Sel_StatusVal(readExcelColumn(filePath, "Recruitment", "Status")));
 		System.out.println("Action Performed on :: \033[1m " + readExcelColumn(filePath, "Recruitment", "Status")
-				+ "from Status Drop Down \033[0m");
+				+ " from Status Drop Down \033[0m");
 		System.out.println("");
 	}
 
@@ -70,7 +70,7 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 		click(Sel_MethodOfApplicationVal(readExcelColumn(filePath, "Recruitment", "MethodofApplication")));
 		System.out.println(
 				"Action Performed on :: \033[1m " + readExcelColumn(filePath, "Recruitment", "MethodofApplication")
-						+ "from MethodofApplication Drop Down \033[0m");
+						+ " from MethodofApplication Drop Down \033[0m");
 		System.out.println("");
 	}
 
@@ -85,6 +85,18 @@ public class Recruitment_DataObjects extends RecruitmentPage {
 		sendKeys(txt_ToDateOfApplication(), readExcelColumn(filePath, "Recruitment", "To"));
 		System.out.println("Action Performed on :: \033[1m Date of Application (To) "
 				+ readExcelColumn(filePath, "Recruitment", "To") + " \033[0m");
+		System.out.println("");
+	}
+
+	public static void Search() throws IOException, Exception {
+		click(btn_Search());
+		System.out.println("Action Performed on :: \033[1m Search \033[0m");
+		System.out.println("");
+	}
+
+	public static void Reset() throws IOException, Exception {
+		click(btn_Reset());
+		System.out.println("Action Performed on :: \033[1m Reset \033[0m");
 		System.out.println("");
 	}
 }

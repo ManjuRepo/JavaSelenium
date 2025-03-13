@@ -44,7 +44,7 @@ public class BaseClass {
 	public static Actions Act;
 	public static String filePath;
 	public static String sheetName;
-	private static int delayInSeconds = 1;
+	private static int delayInSeconds = 2;
 
 	// Public static method to load properties
 	public static void loadProperties() {

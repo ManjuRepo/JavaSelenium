@@ -4,7 +4,7 @@ import orangeHRM.GenericUtility.Login;
 import orangeHRM.GenericUtility.SetEnvironment;
 import orangeHRM.Library.Validation.HRM;
 
-public class Recruitment_Real_Time_Templete extends HRM{
+public class RecruitmentCandidatesSearch_Real_Time_Templete extends HRM {
 
 	public static void Execute() throws Exception {
 		/*************************************************************************************************************************************************************
@@ -12,16 +12,17 @@ public class Recruitment_Real_Time_Templete extends HRM{
 		 *************************************************************************************************************************************************************/
 		SetEnvironment.Execute();
 		Login.Execute();
-		HRM.RecruitmentsNavigation();
-		
-		Recruitment_DataObjects.JobTitle();
-		Recruitment_DataObjects.Vacancy();
-		Recruitment_DataObjects.HiringManager();
-		Recruitment_DataObjects.Status();
-		Recruitment_DataObjects.CandidateName();
-		Recruitment_DataObjects.Keywords();
-		Recruitment_DataObjects.FromDate();
-		Recruitment_DataObjects.ToDate();
-		Recruitment_DataObjects.MethodofApplication();
+		HRM.Recruitment_Candidates();
+
+		RecruitmentCandidates_DataObjects.JobTitle();
+		RecruitmentCandidates_DataObjects.Vacancy();
+		RecruitmentCandidates_DataObjects.HiringManager();
+		RecruitmentCandidates_DataObjects.Status();
+		RecruitmentCandidates_DataObjects.CandidateName();
+		RecruitmentCandidates_DataObjects.Keywords();
+		RecruitmentCandidates_DataObjects.FromDate();
+		RecruitmentCandidates_DataObjects.ToDate();
+		RecruitmentCandidates_DataObjects.MethodofApplication();
+		RecruitmentCandidates_DataObjects.Search();
 	}
 }
