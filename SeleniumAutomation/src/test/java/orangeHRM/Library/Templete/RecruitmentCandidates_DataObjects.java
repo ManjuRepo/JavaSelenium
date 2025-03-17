@@ -2,6 +2,9 @@ package orangeHRM.Library.Templete;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.testng.Assert;
+
 import orangeHRM.Library.PageObject.RecruitmentPage;
 
 public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
@@ -54,12 +57,24 @@ public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
 		sendKeys(txt_CandidateName(), readExcelColumn(filePath, "Recruitment", "CandidateName"));
 		System.out.println("Action Performed on :: \033[1m CandidateName \033[0m" + "text field");
 		System.out.println("");
+
+		if (driver.findElement(By.xpath("//*[text()='No Records Found']")).isDisplayed()
+				|| driver.findElement(By.xpath("//*[text()='Invalid']")).isDisplayed()) {
+			System.out.println(gettext(driver.findElement(By.xpath("//*[text()='No Records Found']"))));
+			Assert.fail();
+		}
 	}
 
 	public static void Keywords() throws IOException, Exception {
 		sendKeys(txt_Keywords(), readExcelColumn(filePath, "Recruitment", "Keywords"));
 		System.out.println("Action Performed on :: \033[1m Keywords \033[0m" + "text field");
 		System.out.println("");
+
+		if (driver.findElement(By.xpath("//*[text()='Should be a valid date in yyyy-mm-dd format']")).isDisplayed()) {
+			System.out.println(
+					gettext(driver.findElement(By.xpath("//*[text()='Should be a valid date in yyyy-mm-dd format']"))));
+			Assert.fail();
+		}
 	}
 
 	public static void MethodofApplication() throws IOException, Exception {
@@ -79,6 +94,12 @@ public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
 		System.out.println("Action Performed on :: \033[1m Date of Application (From) "
 				+ readExcelColumn(filePath, "Recruitment", "From") + "\033[0m");
 		System.out.println("");
+
+		if (driver.findElement(By.xpath("//*[text()='Should be a valid date in yyyy-mm-dd format']")).isDisplayed()) {
+			System.out.println(
+					gettext(driver.findElement(By.xpath("//*[text()='Should be a valid date in yyyy-mm-dd format']"))));
+			Assert.fail();
+		}
 	}
 
 	public static void ToDate() throws IOException, Exception {
@@ -86,6 +107,12 @@ public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
 		System.out.println("Action Performed on :: \033[1m Date of Application (To) "
 				+ readExcelColumn(filePath, "Recruitment", "To") + " \033[0m");
 		System.out.println("");
+
+		if (driver.findElement(By.xpath("//*[text()='Should be a valid date in yyyy-mm-dd format']")).isDisplayed()) {
+			System.out.println(
+					gettext(driver.findElement(By.xpath("//*[text()='Should be a valid date in yyyy-mm-dd format']"))));
+			Assert.fail();
+		}
 	}
 
 	public static void Search() throws IOException, Exception {
