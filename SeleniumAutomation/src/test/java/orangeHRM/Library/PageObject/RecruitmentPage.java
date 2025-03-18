@@ -333,4 +333,124 @@ public class RecruitmentPage extends BaseClass {
 		}
 		return element;
 	}
+	
+	public static WebElement txt_firstname() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[@placeholder='First Name']"));
+			System.out.println("\033[1m txt_firstname \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m txt_firstname \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_firstname");
+			System.out.println(e);
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+	
+	public static WebElement txt_middlename() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[@placeholder='Middle Name']"));
+			System.out.println("\033[1m txt_middlename \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m txt_middlename \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_middlename");
+			System.out.println(e);
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+	
+	public static WebElement txt_lastname() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[@placeholder='Last Name']"));
+			System.out.println("\033[1m txt_lastname \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m txt_lastname \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_lastname");
+			System.out.println(e);
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+	
+	public static WebElement txt_email() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[text()='Email']/parent::div/..//input"));
+			System.out.println("\033[1m txt_email \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m txt_email \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_email");
+			System.out.println(e);
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+	
+	public static WebElement txt_contactnumber() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[text()='Contact Number']/parent::div/..//input"));
+			System.out.println("\033[1m txt_contactnumber \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m txt_contactnumber \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_contactnumber");
+			System.out.println(e);
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+	
+	public static WebElement txt_notes() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[text()='Notes']/parent::div/..//textarea"));
+			System.out.println("\033[1m txt_notes \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m txt_notes \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "txt_notes");
+			System.out.println(e);
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+	
+	public static WebElement chk_ConsentToKeepData() throws Exception {
+
+		element = null;
+
+		try {
+			element = driver.findElement(By.xpath("//*[text()='Consent to keep data']/parent::div/..//input"));
+			System.out.println("\033[1m chk_ConsentToKeepData \033[0m :: found in Recruitment_Page");
+		} catch (Exception e) {
+			System.out.println("\033[1m chk_ConsentToKeepData \033[0m :: not found in Recruitment_Page");
+			TakeScreenshot(driver, "chk_ConsentToKeepData");
+			System.out.println(e);
+			System.out.println(" ");
+			throw (e);
+		}
+		return element;
+	}
+	
 }
