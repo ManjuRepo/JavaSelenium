@@ -23,7 +23,7 @@ public class RecruitmentCandidatesSearch_Real_Time_Templete extends HRM {
 		RecruitmentCandidates_DataObjects.FromDate();
 		RecruitmentCandidates_DataObjects.ToDate();
 		RecruitmentCandidates_DataObjects.MethodofApplication();
-
+		
 		String TC = readExcelColumn(filePath, "Recruitment", "TC");
 		if (TC.equalsIgnoreCase("Search")) {
 			RecruitmentCandidates_DataObjects.Search();
