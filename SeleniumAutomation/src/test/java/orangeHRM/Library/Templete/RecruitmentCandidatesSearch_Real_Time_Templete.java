@@ -14,21 +14,21 @@ public class RecruitmentCandidatesSearch_Real_Time_Templete extends HRM {
 		Login.Execute();
 		HRM.Recruitment_Candidates();
 
-		RecruitmentCandidates_DataObjects.JobTitle();
-		RecruitmentCandidates_DataObjects.Vacancy();
-		RecruitmentCandidates_DataObjects.HiringManager();
-		RecruitmentCandidates_DataObjects.Status();
-		RecruitmentCandidates_DataObjects.CandidateName();
-		RecruitmentCandidates_DataObjects.Keywords();
-		RecruitmentCandidates_DataObjects.FromDate();
-		RecruitmentCandidates_DataObjects.ToDate();
-		RecruitmentCandidates_DataObjects.MethodofApplication();
+		RecruitmentCandidates_Search_DataObjects.JobTitle();
+		RecruitmentCandidates_Search_DataObjects.Vacancy();
+		RecruitmentCandidates_Search_DataObjects.HiringManager();
+		RecruitmentCandidates_Search_DataObjects.Status();
+		RecruitmentCandidates_Search_DataObjects.CandidateName();
+		RecruitmentCandidates_Search_DataObjects.Keywords();
+		RecruitmentCandidates_Search_DataObjects.FromDate();
+		RecruitmentCandidates_Search_DataObjects.ToDate();
+		RecruitmentCandidates_Search_DataObjects.MethodofApplication();
 		
 		String TC = readExcelColumn(filePath, "Recruitment", "TC");
 		if (TC.equalsIgnoreCase("Search")) {
-			RecruitmentCandidates_DataObjects.Search();
+			RecruitmentCandidates_Search_DataObjects.btn_Search();
 		} else {
-			RecruitmentCandidates_DataObjects.Reset();
+			RecruitmentCandidates_Search_DataObjects.btn_Reset();
 		}
 	}
 }

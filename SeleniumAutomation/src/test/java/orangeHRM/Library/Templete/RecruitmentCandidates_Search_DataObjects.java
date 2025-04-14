@@ -3,11 +3,12 @@ package orangeHRM.Library.Templete;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import orangeHRM.Library.PageObject.RecruitmentPage;
 
-public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
+public class RecruitmentCandidates_Search_DataObjects extends RecruitmentPage {
 
 	public static void JobTitle() throws IOException, Exception {
 
@@ -53,7 +54,7 @@ public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
 		System.out.println("");
 	}
 
-	public static void CandidateName() throws IOException, Exception {
+	public static WebElement CandidateName() throws IOException, Exception {
 		sendKeys(txt_CandidateName(), readExcelColumn(filePath, "Recruitment", "CandidateName"));
 		System.out.println("Action Performed on :: \033[1m CandidateName \033[0m" + "text field");
 		System.out.println("");
@@ -63,9 +64,10 @@ public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
 			System.out.println(gettext(driver.findElement(By.xpath("//*[text()='No Records Found']"))));
 			Assert.fail();
 		}
+		return null;
 	}
 
-	public static void Keywords() throws IOException, Exception {
+	public static WebElement Keywords() throws IOException, Exception {
 		sendKeys(txt_Keywords(), readExcelColumn(filePath, "Recruitment", "Keywords"));
 		System.out.println("Action Performed on :: \033[1m Keywords \033[0m" + "text field");
 		System.out.println("");
@@ -75,6 +77,7 @@ public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
 					gettext(driver.findElement(By.xpath("//*[text()='Should be a valid date in yyyy-mm-dd format']"))));
 			Assert.fail();
 		}
+		return null;
 	}
 
 	public static void MethodofApplication() throws IOException, Exception {
@@ -115,15 +118,53 @@ public class RecruitmentCandidates_DataObjects extends RecruitmentPage {
 		}
 	}
 
-	public static void Search() throws IOException, Exception {
+	public static WebElement Search() throws IOException, Exception {
 		click(btn_Search());
 		System.out.println("Action Performed on :: \033[1m Search \033[0m");
 		System.out.println("");
+		return null;
 	}
 
-	public static void Reset() throws IOException, Exception {
+	public static WebElement Reset() throws IOException, Exception {
 		click(btn_Reset());
 		System.out.println("Action Performed on :: \033[1m Reset \033[0m");
 		System.out.println("");
+		return null;
+
+	}
+
+	public static WebElement Add() throws IOException, Exception {
+		click(btn_Add());
+		System.out.println("Action Performed on :: \033[1m Add \033[0m");
+		System.out.println("");
+		return null;
+	}
+
+	public static WebElement Resume() throws IOException, Exception {
+		sendKeys(btn_Resume(), readExcelColumn(filePath, "Add", "Resume"));
+		System.out.println("Action Performed on :: \033[1m Resume \033[0m" + "text field");
+		System.out.println("");
+		return null;
+	}
+
+	public static WebElement FullName() throws IOException, Exception {
+		sendKeys(txt_firstname(), readExcelColumn(filePath, "Add", "FullName"));
+		System.out.println("Action Performed on :: \033[1m FullName \033[0m" + "text field");
+		System.out.println("");
+		return null;
+	}
+
+	public static WebElement MiddleName() throws IOException, Exception {
+		sendKeys(txt_middlename(), readExcelColumn(filePath, "Add", "MiddleName"));
+		System.out.println("Action Performed on :: \033[1m MiddleName \033[0m" + "text field");
+		System.out.println("");
+		return null;
+	}
+
+	public static WebElement LastName() throws IOException, Exception {
+		sendKeys(txt_lastname(), readExcelColumn(filePath, "Add", "LastName"));
+		System.out.println("Action Performed on :: \033[1m LastName \033[0m" + "text field");
+		System.out.println("");
+		return null;
 	}
 }
