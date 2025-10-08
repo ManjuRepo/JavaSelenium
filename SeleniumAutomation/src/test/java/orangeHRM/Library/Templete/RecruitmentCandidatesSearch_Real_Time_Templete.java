@@ -14,16 +14,13 @@ public class RecruitmentCandidatesSearch_Real_Time_Templete extends HRM {
 		Login.Execute();
 		HRM.Recruitment_Candidates();
 
-		RecruitmentCandidates_Search_DataObjects.JobTitle();
-		RecruitmentCandidates_Search_DataObjects.Vacancy();
-		RecruitmentCandidates_Search_DataObjects.HiringManager();
-		RecruitmentCandidates_Search_DataObjects.Status();
-		RecruitmentCandidates_Search_DataObjects.CandidateName();
-		RecruitmentCandidates_Search_DataObjects.Keywords();
-		RecruitmentCandidates_Search_DataObjects.FromDate();
-		RecruitmentCandidates_Search_DataObjects.ToDate();
-		RecruitmentCandidates_Search_DataObjects.MethodofApplication();
-		
+		String[] methods = { "JobTitle", "Vacancy", "HiringManager", "Status", "CandidateName", "Keywords", "FromDate",
+				"ToDate", "MethodofApplication" };
+
+		for (String methodName : methods) {
+			RecruitmentCandidates_Add_DataObjects.class.getMethod(methodName).invoke(null);
+		}
+
 		String TC = readExcelColumn(filePath, "Recruitment", "TC");
 		if (TC.equalsIgnoreCase("Search")) {
 			RecruitmentCandidates_Search_DataObjects.btn_Search();
